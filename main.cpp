@@ -5,7 +5,7 @@ using namespace std;
 // ---------- Register Student ----------
 void registerStudent() {
     string name, index;
-    ofstream file("students.txt", ios::app);
+    ofstream file("students.csv", ios::app);
 
     cout << "Enter student name: ";
     cin.ignore();
@@ -22,7 +22,7 @@ void registerStudent() {
 
 // ---------- View Students ----------
 void viewStudents() {
-    ifstream file("students.txt");
+    ifstream file("students.csv");
     string line;
 
     cout << "\n--- Registered Students ---\n";
@@ -38,7 +38,7 @@ void createSession() {
     cout << "Lecture session created successfully!\n\n";
 }
 void searchStudent() {
-    ifstream file("students.txt");
+    ifstream file("students.csv");
     string line, searchIndex;
     bool found = false;
 
@@ -63,7 +63,7 @@ void searchStudent() {
 void markAttendance() {
     string index, status;
 
-    ofstream file("attendance.txt", ios::app);
+    ofstream file("attendance.csv", ios::app);
 
     cout << "Enter student index number: ";
     cin.ignore();
@@ -78,7 +78,7 @@ void markAttendance() {
     cout << "Attendance recorded successfully!\n\n";
 }
 void viewAttendanceReport() {
-    ifstream file("attendance.txt");
+    ifstream file("attendance.csv");
     string line;
     int present = 0, absent = 0, late = 0;
 
